@@ -2,11 +2,22 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
+const mongoose = require("mongoose");
+require("dotenv").config();
 
 const resumeRoutes = require("./routes/resumeRoutes");
+const authRoutes = require("./routes/authRoutes");
+const contactRoutes = require("./routes/contactRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+/*
+ Connect to MongoDB
+*/
+mongoose.connect(process.env.MONGODB_URI)
+.then(() => console.log('✅ MongoDB Connected successfully!'))
+.catch((err) => console.error('❌ MongoDB Connection Error:', err));
 
 /*
  Ensure uploads folder exists
@@ -34,6 +45,8 @@ app.use("/uploads", express.static(uploadDir));
  Routes
 */
 app.use("/api", resumeRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/contact", contactRoutes);
 
 /*
  Health check
@@ -59,5 +72,5 @@ app.use((err, req, res, next) => {
  Start server
 */
 app.listen(PORT, () => {
-  console.log(`Node.js Backend Proxy is running on port ${PORT}`);
+  console.log(`🚀 Node.js Backend Proxy is running on port ${PORT}`);
 });

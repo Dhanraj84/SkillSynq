@@ -101,10 +101,10 @@ def process_resume(resume_text, job_desc_text):
     jd_skills = extract_all_skills(job_desc_text)
 
     matched_skills = list(set(resume_skills).intersection(set(jd_skills)))
-missing_skills = [
-skill for skill in jd_skills
-if skill not in resume_skills
-]
+    missing_skills = [
+        skill for skill in jd_skills
+        if skill not in resume_skills
+    ]
     # ---------- Skill Match Percentage ----------
 
     if len(jd_skills) > 0:

@@ -28,7 +28,6 @@ Calculates a precise, data-driven similarity score to determine how well your pr
 ### 🧠 AI Skill Gap Analysis
 Identifies the exact matched skills and highlights crucial missing skills needed to bypass the ATS.
 ![Skill Gap Demo]
-
 ---
 
 ## 🚀 What Problem Does It Solve?

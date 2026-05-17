@@ -10,6 +10,7 @@
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3-F7931E?style=for-the-badge&logo=scikit-learn)](https://scikit-learn.org/)
 [![spaCy](https://img.shields.io/badge/spaCy-3-09A3D5?style=for-the-badge&logo=spacy)](https://spacy.io/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-black?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
+[![Expo](https://img.shields.io/badge/Expo-51-000020?style=for-the-badge&logo=expo)](https://expo.dev/)
 
 SkillSynq is an advanced, high-performance platform designed to revolutionize the hiring process. It bridges the gap between job seekers and employers by evaluating a user's resume against a specific job description, providing precise AI-backed compatibility scores and actionable skill insights.
 
@@ -57,20 +58,21 @@ In today's competitive job market, getting past the Applicant Tracking System (A
 ### 4. Premium User Experience
 - **Glassmorphism UI**: Uses beautiful, modern aesthetic principles for a premium feel.
 - **Micro-Animations**: Features smooth, responsive Framer Motion animations across all user interactions.
+- **Cross-Platform**: Fully deployed on the web and available as a standalone Android Application.
 
 ---
 
 ## 🛠 Tech Stack
 
-### Frontend & UI
-- **Framework**: [React.js](https://reactjs.org/) (via Vite)
+### Frontend & Mobile
+- **Web Framework**: [React.js](https://reactjs.org/) (via Vite)
+- **Mobile Framework**: [React Native](https://reactnative.dev/) with Expo
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
 
 ### Backend Node API
 - **Runtime**: [Node.js](https://nodejs.org/) with Express.js
-- **File Handling**: Multer for secure parse streams
+- **Database**: MongoDB Atlas
 - **Network**: Axios for efficient proxying 
 
 ### ML & AI Service
@@ -82,8 +84,9 @@ In today's competitive job market, getting past the Applicant Tracking System (A
 
 ## 🏗️ Architecture Overview
 
-- **Frontend (React/Vite)**: High-performance, aesthetic UI and interaction rendering.
-- **Backend (Node.js/Express)**: Secure file upload handler and proxy routing server.
+- **Frontend (React/Vite)**: High-performance, aesthetic UI deployed on Vercel.
+- **Mobile (React Native/Expo)**: Hybrid WebView architecture deployed as an Android APK.
+- **Backend (Node.js/Express)**: Secure API and database handler deployed on Render.
 - **ML Engine (Python/FastAPI)**: Specialized, asynchronous AI prediction and NLP engine processing.
 
 ---
@@ -112,7 +115,7 @@ In today's competitive job market, getting past the Applicant Tracking System (A
     ```bash
     cd backend
     npm install
-    node server.js
+    npm run start
     ```
     *Runs on http://localhost:5000*
 
@@ -124,6 +127,14 @@ In today's competitive job market, getting past the Applicant Tracking System (A
     npm run dev
     ```
     *Open [http://localhost:5173](http://localhost:5173) to view the application.*
+    
+ 4. **Mobile Application (Expo)**
+    To run the mobile app locally:
+    ```bash
+    cd mobile
+    npm install
+    npx expo start -c
+    ```
 
 ---
 
@@ -136,7 +147,7 @@ In today's competitive job market, getting past the Applicant Tracking System (A
 
 ---
 
-## 👨‍💻 Author
+## 👨💻 Author
 
 **Dhanraj Kumar**  
 *Passionate about building practical AI solutions.*
